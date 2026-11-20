@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  background-color: #d5ccab;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.2;
+}
+ 
+header,
+main,
+section,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 0;
+}
+
+main {
+  width: 100%;
+  padding: 1.5rem 0 0;
+}
+ 
+section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+ 
+h1, h2 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  text-align: center;
+  color: #d5ccab;
+  background-color: #505143;
+  border: 3px solid #505143;
+  border-radius: 1px;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  padding: 0.25rem 0.5rem;
+}
+ 
+h1,
+h2 {
+  font-size: 2rem;
+}
+ 
+p {
+  color: #1c1c1c;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold
+}
+ 
+ul {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+li {
+  margin: 10px;
+  padding: 0.4rem 0.5rem;
+  color: #d5ccab;
+  background-color: #878568;
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+}
+
+a {
+  color: #505143;
+  font-family: "Merriweather", sans-serif;
+  font-weight: bold;
+}
+
+/* ---------- Jump-to nav bar ---------- */
+.jump-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #d5ccab;
+  border-top: 2px solid #505143;
+  border-bottom: 2px solid #505143;
+}
+
+.jump-nav a {
+  flex: 1 1 0;
+  max-width: 200px;
+  text-align: center;
+  font-family: "Merriweather", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #d5ccab;
+  background: #505143;
+  padding: 9px 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+/* ---------- Section containers ---------- */
+.container {
+  width: 100%;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1.75rem;
+  border: 2px solid #505143;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 70px;
+}
+
+/* ---------- About ---------- */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.icon {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.icon img {
+  height: auto;
+  max-height: 180px;
+  width: auto;
+}
+
+.about-content p {
+  flex: 1;
+  margin: 0;
+}
+
+/* ---------- Passion projects ---------- */
+.passionprojects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.passionprojects img {
+  height: 160px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .icon {
+    max-width: 100%;
+  }
+
+  .jump-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .jump-nav a {
+    max-width: none;
+    font-size: 0.72rem;
+    padding: 8px 6px;
+  }
+
+  .container {
+    padding: 1.1rem 1rem;
+    scroll-margin-top: 100px;
+  }
+
+  .passionprojects img {
+    height: 130px;
+  }
+}
